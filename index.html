@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caldarium Demo Applications</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#f7f8fa;
+  color:#172033;
+}
+.container{
+  width:min(1280px,94%);
+  margin:0 auto;
+  padding:42px 0 50px;
+}
+header{text-align:center;margin-bottom:42px}
+.brand{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.16em;
+  color:#68768a;
+  margin-bottom:22px;
+}
+h1{
+  margin:0 0 14px;
+  font-size:50px;
+  line-height:1.05;
+  letter-spacing:-1.5px;
+}
+.subtitle{
+  margin:0;
+  color:#536985;
+  font-size:21px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:28px;
+}
+.card{
+  background:#fff;
+  border:1px solid #dfe4eb;
+  border-radius:24px;
+  padding:44px 40px 38px;
+  min-height:390px;
+  box-shadow:0 12px 30px rgba(20,30,50,.04);
+  display:flex;
+  flex-direction:column;
+}
+.icon{
+  font-size:34px;
+  margin-bottom:32px;
+}
+.title-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:16px;
+}
+h2{
+  margin:0;
+  font-size:30px;
+  letter-spacing:-.7px;
+}
+.status{
+  flex:none;
+  padding:10px 15px;
+  border-radius:22px;
+  background:#e8f7ee;
+  color:#19733b;
+  font-size:14px;
+  font-weight:700;
+}
+.description{
+  margin:0 0 30px;
+  color:#536985;
+  font-size:20px;
+  line-height:1.65;
+  max-width:570px;
+}
+.actions{margin-top:auto}
+.view{
+  display:inline-block;
+  text-decoration:none;
+  background:#172033;
+  color:#fff;
+  padding:15px 22px;
+  border-radius:13px;
+  font-size:16px;
+  font-weight:700;
+}
+.view:hover{opacity:.92}
+@media(max-width:800px){
+  .grid{grid-template-columns:1fr}
+  h1{font-size:40px}
+  .subtitle{font-size:18px}
+  .card{min-height:0;padding:32px 28px}
+  h2{font-size:25px}
+  .description{font-size:17px}
+}
+</style>
+</head>
+<body>
+<main class="container">
+  <header>
+    <div class="brand">CALDARIUM</div>
+    <h1>Demo Applications</h1>
+    <p class="subtitle">Current demos for review and demonstration</p>
+  </header>
+
+  <section class="grid">
+    <article class="card">
+      <div class="icon">🏥</div>
+      <div class="title-row">
+        <h2>Qubika / Caldarium</h2>
+        <span class="status">● Live</span>
+      </div>
+      <p class="description">
+        Interactive prior authorization demo showing the current workflow, requirements, and supporting evidence.
+      </p>
+      <div class="actions">
+        <a class="view" href="https://caldarium-demo-v2.vercel.app/dashboard" target="_blank" rel="noopener">View Demo</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="icon">💊</div>
+      <div class="title-row">
+        <h2>Preferred Drugs</h2>
+        <span class="status">● Live</span>
+      </div>
+      <p class="description">
+        Preferred medication view organized by payer, with policy requirements and links to the source documents.
+      </p>
+      <div class="actions">
+        <a class="view" href="https://adh-gi-coverage-lookup.vercel.app/Preferred%20Drug%20by%20Payer%20(standalone).html" target="_blank" rel="noopener">View Demo</a>
+      </div>
+    </article>
+  </section>
+</main>
+</body>
+</html>
